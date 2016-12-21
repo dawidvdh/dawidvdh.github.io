@@ -1,0 +1,37 @@
+{
+  "name": "dawidvdh.github.io",
+  "version": "1.0.0",
+  "description": "portfolio site",
+  "main": "index.js",
+  "repository": "https://github.com/dawidvdh/dawidvdh.github.io.git",
+  "author": "Dawid van der Hoven <dawidvdh@gmail.com>",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "react": "^15.4.1",
+    "react-dom": "^15.4.1",
+    "react-router": "4.0.0-alpha.6"
+  },
+  "devDependencies": {
+    "babel-core": "^6.21.0",
+    "babel-eslint": "^7.1.1",
+    "babel-loader": "^6.2.10",
+    "babel-preset-es2015": "^6.18.0",
+    "babel-preset-react": "^6.16.0",
+    "babel-preset-react-hmre": "^1.1.1",
+    "css-loader": "^0.26.1",
+    "eslint": "^3.12.2",
+    "eslint-config-airbnb": "^13.0.0",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "2.2.3",
+    "eslint-plugin-react": "^6.8.0",
+    "extract-text-webpack-plugin": "2.0.0-beta.4",
+    "style-loader": "^0.13.1",
+    "webpack": "2.2.0-rc.1",
+    "webpack-dev-server": "2.2.0-rc.0"
+  },
+  "scripts": {
+    "dev": "webpack-dev-server --config webpack/dev.config.js",
+    "lint": "eslint -c .eslintrc src -f table || true"
+  }
+}
