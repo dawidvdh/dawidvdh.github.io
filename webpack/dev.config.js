@@ -30,6 +30,9 @@ module.exports = {
       }
     ]
   },
+  resolve: {
+    extensions: ['.json', '.js', '.jsx']
+  },
   plugins: [
     new ExtractTextPlugin({
       filename: "[name].bundle.css",
