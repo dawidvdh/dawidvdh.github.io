@@ -1,14 +1,15 @@
 language: node_js
 node_js:
-  - node
+- node
 script:
-  - mkdir -p build
-  - cp index.html build/
-  - ls build
+- mkdir -p build
+- cp index.html build/
+- ls build
 deploy:
   provider: s3
-  access_key_id: $AWS_ACCESS_KEY
-  secret_access_key: $AWS_SECRET_KEY
+  access_key_id: AKIAIABIIMDUHKGWWN6Q
+  secret_access_key:
+    secure: SZ2Kc8tslkpgiW9wYKAX9PFNM0t9Fs8NV13T+Et3/zm1WNbZLSVVACpzXfXbYf+Z4BDEWu1dcrLdyOA2yP8DYF5iFqGBZCoERGlueV+71FgCix7GtTdRb0x4gfgbu1ayMu9hgU9YOM3KwKFlPXyXIpx4fqZBd3R9m/eKPKJvqbW2EjCq+0vNXg7E72Pu4ty44YrfqIrlwDVv8/abCejSUwNmcaKzVqFpbGwXxJCjoWkJVK5o1W4Y+hU1HvuVSUZpVs+o7LeT0Ap2rjjPDkCHpCnArDycPLAl6JWRuEhB84PN07sbcfsyRaEb1ikRPCckF68YVIEVTzhd5hvgIE8lrMcCM57ZWowe6eL6O+EZkPCxSBPaAQkNo1l33TDMLFUgv6hPC0aIM08dlb0QcXOD1ER6bVlqJsh34u+33mJsJchRFtWRlee+4hindWGpNz1sT+cjcxqg9z+QKkWqpbj2SgZw7pgUdooKRR08ag7IJJu/LGyb6WXuDrfsGrjRxYsSOkjBtNnd1PFO7gfl4RVe7mET/34ugp70yTm3iHNbvgokzkD5b9VV6uMXugP6mwcrvGVT4EiHmg68yylZRzmcqCNUHMX114HsihWWXHnQ7SvKa/3UiJ+FtzrFM8l2Ln2VQQUp+Ve8U+gcXhklxqfzC4qb1vMFap5y1H0BvZMq1vE=
   bucket: dawidvdh.com
   acl: public_read
   skip_cleanup: true
@@ -16,4 +17,4 @@ deploy:
   region: us-east-1
 branches:
   only:
-    - master
+  - master
