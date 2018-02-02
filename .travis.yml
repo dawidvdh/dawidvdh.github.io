@@ -1,0 +1,19 @@
+language: node_js
+node_js:
+  - node
+script:
+  - mkdir -p build
+  - cp index.html build/
+  - ls build
+deploy:
+  provider: s3
+  access_key_id: AKIAJE6HJVEHK2476P4A
+  secret_access_key:
+    secure: hoyBmeq0ndUrwlvq7+2gJrnz/5+TgykM3w2LD1Q3WsxHyXxibUUWwD93qxtmZmK4JfBjJAxkK7lS9y+fLrc7/EpDzY8XXYUcYI4MMu30f4g1WzK49hPgadNv8mksDz1XI5UKS2m2rZHSJU3pd863y/EkY5m1b4Q4ssMc3Q21J2g7BwQ8dd6/UOoiri9H12BV6IH+bs7u3DhQT18uFX79dzZCND2RxUKPaCAkve+vmnW0t+SoGvegwo4LulJ9vwojWgu3+TFDO0belMj0J70QZ4OJ1jC5S4890P80/UgXj34ZhbAYFz7i8pLu4BToEFbtQHETodJapv8G22rDRSqJGdEWyv2WzCMFJkfPr1Q9ntrYeriyffaN2HY7qQ9maC0k8MaZW0vEGsrBLQYlWZHIhRmS6YuRjn4qq2EBVZnLVi1nt1dMkBfxQwTerB1Px/jN4wT1tVqMQ6esBvyGig4OmJvnRcQJ5B0fqcckq5kakq8qKBeGjAInh4FBbkuiaa7nwse/5cU700PMUNuKwrvnICbZDJuGlyKeJGDv5UMqyKl7krymSUWEE/+Wm3wNOaOGtI2cCHKPNyVP2ipLhCLhl1RlfGc1HNVKGE2DBsZnsFL7RiovXN8SkfcJiIvewyH07vzyfAn2S92yT31pjezz9cJc39hO6PeOyzLTvV8HxKk=
+  bucket: dawidvdh.com
+  acl: public_read
+  skip_cleanup: true
+  local_dir: build
+branches:
+  only:
+    - master

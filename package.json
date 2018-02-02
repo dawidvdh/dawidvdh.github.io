@@ -1,5 +1,5 @@
 {
-  "name": "dawidvdh.github.io",
+  "name": "dawidvdh",
   "version": "1.0.0",
   "description": "portfolio site",
   "main": "index.js",
@@ -32,7 +32,7 @@
     "webpack-dev-server": "2.2.0-rc.0"
   },
   "scripts": {
-    "dev": "webpack-dev-server --config webpack/dev.config.js",
-    "lint": "eslint -c .eslintrc src -f table || true"
+    "lint": "eslint -c .eslintrc src -f table || true",
+    "test": "exit 0"
   }
 }
