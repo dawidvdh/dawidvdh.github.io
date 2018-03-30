@@ -4,7 +4,7 @@
   "description": "A Terrifying Resume",
   "main": "index.js",
   "repository": "https://github.com/dawidvdh/dawidvdh.github.io.git",
-  "author": "Dawid van der Hoven <dawidvdh@gmail.com>",
+  "author": "Dawid van der Hoven <hi@dawidvdh.com>",
   "license": "MIT",
   "private": true,
   "scripts": {
