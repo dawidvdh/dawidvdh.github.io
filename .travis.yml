@@ -1,9 +1,10 @@
 language: node_js
 node_js:
 - node
+install:
+- npm install
 script:
-- mkdir -p build
-- cp index.html build/
+- npm run build
 - ls build
 deploy:
   provider: s3
@@ -14,6 +15,7 @@ deploy:
   skip_cleanup: true
   local_dir: build
   region: us-east-1
+  detect_encoding: true
 branches:
   only:
   - master
