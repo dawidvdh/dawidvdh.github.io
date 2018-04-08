@@ -4,6 +4,7 @@ node_js:
 install:
 - npm install
 script:
+- mkdir -p build
 - npm run build
 - ls build
 deploy:

@@ -9,7 +9,7 @@
   "private": true,
   "scripts": {
     "test": "exit 0",
-    "build": "ngzip ./index.html > ./index.html --best"
+    "build": "ngzip ./index.html > ./build/index.html --best"
   },
   "devDependencies": {
     "ngzip": "^1.1.3"
