@@ -9,7 +9,7 @@
   "private": true,
   "scripts": {
     "test": "exit 0",
-    "build": "gzipme -c best -O ./build/index.html index.html"
+    "build": "gzipme -c best -O ./build/index.html ./index.html"
   },
   "devDependencies": {
     "gzipme": "^0.1.1"
