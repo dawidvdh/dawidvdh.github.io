@@ -1,4 +1,5 @@
 import React from 'react';
+import { renderToStaticMarkup, renderToString } from 'react-dom/server';
 
 const Html = () => (
   <html lang="en">
@@ -10,3 +11,8 @@ const Html = () => (
     </body>
   </html>
 );
+
+export default function render(locals, callback) {
+  const render = renderToStaticMarkup(<Html />);
+  callback(null, `<!DOCTYPE html>${render}`);
+}

@@ -1,11 +1,14 @@
 const path = require('path');
+const StaticSiteGeneratorPlugin = require('static-site-generator-webpack-plugin');
 
 module.exports = {
-  entry: "./src/index.js",
+  entry: './src/index.js',
   output: {
-    path: path.resolve(__dirname, "build")
+    filename: '[name].js',
+    path: path.resolve(__dirname, 'build'),
+    libraryTarget: 'umd'
   },
-  target: "web",
+  target: 'node',
   module: {
     rules: [
       {
@@ -14,5 +17,11 @@ module.exports = {
         use: 'babel-loader'
       }
     ]
-  }
-}
+  },
+  plugins: [
+    new StaticSiteGeneratorPlugin({
+      paths: ['/'],
+      locals: {}
+    })
+  ]
+};
