@@ -1,5 +1,7 @@
+// @flow
+
 import React from 'react';
-import { renderToStaticMarkup, renderToString } from 'react-dom/server';
+import { renderToStaticMarkup } from 'react-dom/server';
 
 const Html = () => (
   <html lang="en">
