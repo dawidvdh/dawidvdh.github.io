@@ -2,6 +2,8 @@
 
 import React from 'react';
 import { renderToStaticMarkup } from 'react-dom/server';
+import { renderStylesToString } from 'emotion-server';
+import Home from './Home'
 
 const Html = () => (
   <html lang="en">
@@ -9,12 +11,13 @@ const Html = () => (
       <title>Test</title>
     </head>
     <body>
-      <div>more tests</div>
+      <Home />
     </body>
   </html>
 );
 
 export default function render(locals, callback) {
   const render = renderToStaticMarkup(<Html />);
-  callback(null, `<!DOCTYPE html>${render}`);
+  const withStyles = renderStylesToString(render);
+  callback(null, `<!DOCTYPE html>${withStyles}`);
 }
