@@ -2,10 +2,10 @@
 
 import React from 'react';
 import { renderToStaticMarkup } from 'react-dom/server';
-import { renderStylesToString } from 'emotion-server';
+import { renderStylesToString, extractCritical } from 'emotion-server';
 import Home from './Home';
 
-const Html = () => (
+const Html = ({ style }) => (
   <html lang="en">
     <head>
       <title>Dawid van der Hoven - Coming Soon</title>
@@ -16,6 +16,7 @@ const Html = () => (
         href="https://fonts.googleapis.com/css?family=Luckiest+Guy"
         rel="stylesheet"
       />
+      <style dangerouslySetInnerHTML={{ __html: style }} />
     </head>
     <body>
       <Home />
@@ -26,7 +27,7 @@ const Html = () => (
       <script
         dangerouslySetInnerHTML={{
           __html:
-            "window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments)}gtag('js', new Date());gtag('config', 'UA-57784776-1');"
+            'function gtag(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],gtag("js",new Date),gtag("config","UA-57784776-1");'
         }}
       />
     </body>
@@ -34,7 +35,7 @@ const Html = () => (
 );
 
 export default function render(locals, callback) {
-  const render = renderToStaticMarkup(<Html />);
-  const withStyles = renderStylesToString(render);
-  callback(null, `<!DOCTYPE html>${withStyles}`);
+  const { html, css } = extractCritical(renderToStaticMarkup(<Html />));
+  const staticHtml = html.replace('<style></style>', `<style>${css}</style>`);
+  callback(null, `<!DOCTYPE html>${staticHtml}`);
 }
