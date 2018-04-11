@@ -11,6 +11,7 @@
     "test": "exit 0",
     "prebuild": "rimraf ./build",
     "build": "webpack --config webpack.config.js",
+    "postbuild": "rimraf ./build/main.js",
     "gzip": "ngzip ./build/index.html > ./build/index.html --best",
     "generate:favicon": "real-favicon generate faviconDescription.json build/faviconData.json build",
     "postgenerate:favicon": "real-favicon inject build/faviconData.json build/ build/*.html"
