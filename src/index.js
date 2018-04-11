@@ -2,14 +2,18 @@
 
 import React from 'react';
 import { renderToStaticMarkup } from 'react-dom/server';
-import { renderStylesToString, extractCritical } from 'emotion-server';
+import { extractCritical } from 'emotion-server';
 import Home from './Home';
 
-const Html = ({ style }) => (
+type Props = {
+  style?: string
+};
+
+const Html = ({ style }: Props) => (
   <html lang="en">
     <head>
       <title>Dawid van der Hoven - Coming Soon</title>
-      <meta charset="UTF-8" />
+      <meta charSet="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1" />
       <meta name="description" content="Dawid van der Hoven - Portfolio" />
       <link
@@ -34,7 +38,11 @@ const Html = ({ style }) => (
   </html>
 );
 
-export default function render(locals, callback) {
+Html.defaultProps = {
+  style: ''
+};
+
+export default function render(locals: {}, callback: (null, string) => mixed) {
   const { html, css } = extractCritical(renderToStaticMarkup(<Html />));
   const staticHtml = html.replace('<style></style>', `<style>${css}</style>`);
   callback(null, `<!DOCTYPE html>${staticHtml}`);
