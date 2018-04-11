@@ -16,7 +16,8 @@ module.exports = {
         test: /\.jsx?$/,
         exclude: /node_modules/,
         use: 'babel-loader'
-      }
+      },
+      { test: /\.(png|jpg|svg)$/, loader: 'url-loader?limit=8192' }
     ]
   },
   plugins: [
