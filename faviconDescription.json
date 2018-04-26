@@ -34,7 +34,7 @@
 			"themeColor": "#ffffff",
 			"manifest": {
 				"name": "Dawidvdh",
-				"startUrl": "https://dawidvdh.com",
+				"startUrl": "https://www.dawid.codes",
 				"display": "standalone",
 				"orientation": "notSet",
 				"onConflict": "override",
