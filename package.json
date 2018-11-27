@@ -18,7 +18,7 @@
   },
   "dependencies": {
     "emotion": "^9.1.1",
-    "emotion-server": "^9.1.1",
+    "emotion-server": "^10.0.0",
     "react": "^16.3.1",
     "react-dom": "^16.3.1"
   },
