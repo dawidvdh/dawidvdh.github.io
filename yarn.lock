@@ -93,6 +93,10 @@
     lodash "^4.2.0"
     to-fast-properties "^2.0.0"
 
+"@emotion/utils@0.11.1":
+  version "0.11.1"
+  resolved "https://registry.yarnpkg.com/@emotion/utils/-/utils-0.11.1.tgz#8529b7412a6eb4b48bdf6e720cc1b8e6e1e17628"
+
 "@sindresorhus/is@^0.7.0":
   version "0.7.0"
   resolved "https://registry.yarnpkg.com/@sindresorhus/is/-/is-0.7.0.tgz#9a06f4f137ee84d7df0460c1fdb1135ffa6c50fd"
@@ -1668,11 +1672,11 @@ create-ecdh@^4.0.0:
     bn.js "^4.1.0"
     elliptic "^6.0.0"
 
-create-emotion-server@^9.1.1:
-  version "9.1.1"
-  resolved "https://registry.yarnpkg.com/create-emotion-server/-/create-emotion-server-9.1.1.tgz#28054753c1124efcb6b9655aa6d141c5e892eb3b"
+create-emotion-server@10.0.0:
+  version "10.0.0"
+  resolved "https://registry.yarnpkg.com/create-emotion-server/-/create-emotion-server-10.0.0.tgz#d7089cbff60f6ba8776601b9a6d22ab39e260633"
   dependencies:
-    emotion-utils "^9.1.0"
+    "@emotion/utils" "0.11.1"
     html-tokenize "^2.0.0"
     multipipe "^1.0.2"
     through "^2.3.8"
@@ -2020,11 +2024,11 @@ emojis-list@^2.0.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/emojis-list/-/emojis-list-2.1.0.tgz#4daa4d9db00f9819880c79fa457ae5b09a1fd389"
 
-emotion-server@^9.1.1:
-  version "9.1.1"
-  resolved "https://registry.yarnpkg.com/emotion-server/-/emotion-server-9.1.1.tgz#c2b16bc186cf6e10ef4c68843c27f9db0a8965b2"
+emotion-server@^10.0.0:
+  version "10.0.0"
+  resolved "https://registry.yarnpkg.com/emotion-server/-/emotion-server-10.0.0.tgz#099f4ced6a6bfb071e4a3979328f47c33ea8afd1"
   dependencies:
-    create-emotion-server "^9.1.1"
+    create-emotion-server "10.0.0"
 
 emotion-utils@^9.1.0:
   version "9.1.0"
@@ -2526,9 +2530,9 @@ flat-cache@^1.2.1:
     graceful-fs "^4.1.2"
     write "^0.2.1"
 
-flow-bin@^0.69.0:
-  version "0.69.0"
-  resolved "https://registry.yarnpkg.com/flow-bin/-/flow-bin-0.69.0.tgz#053159a684a6051fcbf0b71a2eb19a9679082da6"
+flow-bin@^0.70.0:
+  version "0.70.0"
+  resolved "https://registry.yarnpkg.com/flow-bin/-/flow-bin-0.70.0.tgz#080ae83a997f2b4ddb3dc2649bf13336825292b5"
 
 flow-parser@^0.*:
   version "0.69.0"
