@@ -1,24 +1,4 @@
 {
-  "presets": [
-    [
-      "env",
-      {
-        "modules": false,
-        "targets": {
-          "browsers": ["last 3 versions", "safari >= 7"]
-        }
-      }
-    ],
-    "react"
-  ],
-  "env": {
-    "production": {
-      "plugins": [["emotion", { "hoist": true }]]
-    },
-    "development": {
-      "plugins": [
-        ["emotion", { "sourceMap": true, "autoLabel": true }]
-      ]
-    }
-  }
+  "presets": ["react-static/babel-preset.js"],
+  "plugins": ["emotion"]
 }
