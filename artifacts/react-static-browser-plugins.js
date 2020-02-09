@@ -13,11 +13,6 @@ const plugins = [{
         hooks: {}
       },
 {
-        location: "/Users/dawidvanderhoven/code/personal/dawidvdh.github.io/node_modules/react-static-plugin-source-filesystem",
-        plugins: [],
-        hooks: {}
-      },
-{
         location: "/Users/dawidvanderhoven/code/personal/dawidvdh.github.io/node_modules/react-static-plugin-reach-router",
         plugins: [],
         hooks: plugin0({})

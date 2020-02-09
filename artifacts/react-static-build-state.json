@@ -1,0 +1,65 @@
+{
+  "prefetchRate": 5,
+  "maxThreads": null,
+  "disableRoutePrefixing": false,
+  "outputFileRate": 100,
+  "extensions": [
+    ".js",
+    ".jsx",
+    ".ts",
+    ".tsx"
+  ],
+  "minLoadTime": 200,
+  "disablePreload": false,
+  "disableRuntime": false,
+  "preloadPollInterval": 300,
+  "productionSourceMaps": false,
+  "entry": "/Users/dawidvanderhoven/code/personal/dawidvdh.github.io/src/index.tsx",
+  "plugins": [
+    "react-static-plugin-emotion",
+    "react-static-plugin-typescript",
+    [
+      "/Users/dawidvanderhoven/code/personal/dawidvdh.github.io/node_modules/react-static-plugin-source-filesystem/node.api.js",
+      {
+        "location": "/Users/dawidvanderhoven/code/personal/dawidvdh.github.io/src/pages"
+      }
+    ],
+    "/Users/dawidvanderhoven/code/personal/dawidvdh.github.io/node_modules/react-static-plugin-reach-router/browser.api.js",
+    "/Users/dawidvanderhoven/code/personal/dawidvdh.github.io/node_modules/react-static-plugin-sitemap/dist/node.api.js",
+    "/Users/dawidvanderhoven/code/personal/dawidvdh.github.io"
+  ],
+  "paths": {
+    "ROOT": "/Users/dawidvanderhoven/code/personal/dawidvdh.github.io",
+    "SRC": "/Users/dawidvanderhoven/code/personal/dawidvdh.github.io/src",
+    "DIST": "/Users/dawidvanderhoven/code/personal/dawidvdh.github.io/dist",
+    "ASSETS": "/Users/dawidvanderhoven/code/personal/dawidvdh.github.io/dist",
+    "PLUGINS": "/Users/dawidvanderhoven/code/personal/dawidvdh.github.io/plugins",
+    "TEMP": "/Users/dawidvanderhoven/code/personal/dawidvdh.github.io/tmp",
+    "ARTIFACTS": "/Users/dawidvanderhoven/code/personal/dawidvdh.github.io/artifacts",
+    "PUBLIC": "/Users/dawidvanderhoven/code/personal/dawidvdh.github.io/public",
+    "NODE_MODULES": "/Users/dawidvanderhoven/code/personal/dawidvdh.github.io/node_modules",
+    "EXCLUDE_MODULES": "/Users/dawidvanderhoven/code/personal/dawidvdh.github.io/node_modules",
+    "PACKAGE": "/Users/dawidvanderhoven/code/personal/dawidvdh.github.io/package.json",
+    "HTML_TEMPLATE": "/Users/dawidvanderhoven/code/personal/dawidvdh.github.io/dist/index.html",
+    "STATIC_DATA": "/Users/dawidvanderhoven/code/personal/dawidvdh.github.io/dist/staticData"
+  },
+  "siteRoot": "/",
+  "basePath": "",
+  "publicPath": "/",
+  "assetsPath": "",
+  "extractCssChunks": false,
+  "inlineCss": false,
+  "babelExcludes": [],
+  "devServer": {
+    "host": "localhost",
+    "port": 3000
+  },
+  "terser": {
+    "terserOptions": {
+      "mangle": {},
+      "parse": {},
+      "compress": {},
+      "output": {}
+    }
+  }
+}

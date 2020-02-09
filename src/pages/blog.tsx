@@ -1,16 +1,24 @@
-import React from 'react'
-import { useRouteData } from 'react-static'
-import { Link } from '@reach/router'
-import { Post } from 'types'
+import React from "react";
+import { useRouteData } from "react-static";
+import { Link } from "@reach/router";
+import { Post } from "types";
+import ReactMarkdown from "react-markdown";
 
 export default () => {
-  const { posts }: { posts: Post[] } = useRouteData()
+  const {
+    posts,
+    moo
+  }: {
+    posts: Post[];
+    moo: any;
+  } = useRouteData();
 
   return (
     <div>
       <h1>It's blog time.</h1>
       <br />
       All Posts:
+      <ReactMarkdown source={moo} />
       <ul>
         {posts.map(post => (
           <li key={post.id}>
@@ -19,5 +27,5 @@ export default () => {
         ))}
       </ul>
     </div>
-  )
-}
+  );
+};
