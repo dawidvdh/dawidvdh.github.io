@@ -18,12 +18,6 @@
   "plugins": [
     "react-static-plugin-emotion",
     "react-static-plugin-typescript",
-    [
-      "/Users/dawidvanderhoven/code/personal/dawidvdh.github.io/node_modules/react-static-plugin-source-filesystem/node.api.js",
-      {
-        "location": "/Users/dawidvanderhoven/code/personal/dawidvdh.github.io/src/pages"
-      }
-    ],
     "/Users/dawidvanderhoven/code/personal/dawidvdh.github.io/node_modules/react-static-plugin-reach-router/browser.api.js",
     "/Users/dawidvanderhoven/code/personal/dawidvdh.github.io/node_modules/react-static-plugin-sitemap/dist/node.api.js",
     "/Users/dawidvanderhoven/code/personal/dawidvdh.github.io"

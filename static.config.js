@@ -1,21 +1,29 @@
-import axios from "axios";
 import path from "path";
 import fs from "fs";
 import { promisify } from "util";
 
 const readFile = promisify(fs.readFile);
 
+async function getContents(fileName) {
+  return readFile(
+    path.join(__dirname, "content", "case-studies", `${fileName}.md`),
+    "utf-8"
+  );
+}
+
 export default {
   entry: path.join(__dirname, "src", "index.tsx"),
   getRoutes: async () => {
-    const { data: posts } /* :{ data: Post[] } */ = await axios.get(
-      "https://jsonplaceholder.typicode.com/posts"
-    );
-
     const markdownFile = await readFile(
-      path.join(__dirname, "content", "example.md"),
+      path.join(__dirname, "content", "about.md"),
       "utf-8"
     );
+
+    const caseStudies = [
+      { slug: "cancer-dojo", title: "Cancer Dojo" },
+      { slug: "cartel-house", title: "Cartel House" },
+      { slug: "mycujoo", title: "MyCujoo" }
+    ];
 
     return [
       {
@@ -24,22 +32,26 @@ export default {
       },
       {
         path: "/about",
-        template: "src/pages/about"
+        template: "src/pages/About"
       },
       {
-        path: "/blog",
-        template: "src/pages/blog",
-        getData: () => ({
-          posts,
-          moo: markdownFile
+        path: "/case-studies",
+        template: "src/pages/CaseStudies",
+        getData: async () => ({
+          moo: markdownFile,
+          caseStudies
         }),
-        children: posts.map((post /* : Post */) => ({
-          path: `/post/${post.id}`,
-          template: "src/containers/Post",
-          getData: () => ({
-            post
+        children: caseStudies.map((caseStudy /* : CaseStudy */) => ({
+          path: caseStudy.slug,
+          template: "src/containers/CaseStudy",
+          getData: async () => ({
+            caseStudy: await getContents(caseStudy.slug)
           })
         }))
+      },
+      {
+        path: "/contact",
+        template: "src/pages/Contact"
       }
     ];
   },

@@ -1,5 +1,4 @@
-export interface Post {
-  body: string
-  id: number
-  title: string
+export interface CaseStudy {
+  slug: string;
+  title: string;
 }
